@@ -2,9 +2,16 @@ body{
    margin:0px;
     padding: 0px;
     overflow-x: hidden;
+    /*background:#E3DFD2;box-shadow: inset 0 0 20vmin 0 #585247;*/
 }
 h3{
     text-align: center;
+}
+h1 ,h2, h3, h4, h5, h6, p{
+    text-align: right;
+}
+p{
+    font-size: 20px;
 }
 .main-page-container{
     width: 100%;
@@ -13,17 +20,405 @@ h3{
 }
 .logo-container{
     width: 100%;
-    height: 50px;
-    border: 2px solid black;
+    height: 100px;
+    border: 1px solid black;
     margin:0px;
     padding: 0px;
 }
 .image-slider-container{
     width: 100%;
-    height: 350px;
-    border: 2px solid;
+    height: 450px;
     margin-top: 5px;
 }
 .menu-container{
-    border: 2px solid black;
+    width: 100%;
+    height: 500px;
 }
+
+
+/************
+Slider Styles Starts here
+****************/
+@font-face {
+    font-family: sans-serif;
+    src: url(https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic);
+}
+
+
+
+body {
+  font: 14px/2 "Open sans",sans-serif;
+  letter-spacing: 0.05em;
+  background:#E3DFD2;box-shadow: inset 0 0 20vmin 0 #585247;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  padding: 13px 20px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+}
+.btn-learn-more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e1e1e1;
+  z-index: 1;
+  opacity: 0;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+}
+.btn-learn-more::after {
+  transition: border 0.1s linear 0.05s;
+}
+.btn-learn-more .btn-inner {
+  position: relative;
+  z-index: 2;
+}
+.btn-learn-more:hover {
+  color: #373737;
+  transition: color 0.1s linear 0s;
+}
+.btn-learn-more:hover::before {
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+}
+.btn-learn-more:hover::after {
+  border-color: #373737;
+  transition: border 0.1s linear 0s;
+}
+
+.slideshow {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  z-index: 1;
+}
+.slideshow .slideshow-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slideshow .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.slideshow .sld1 {
+  background-image: url("http://shaha.ancorathemes.com/wp-content/uploads/2017/10/slider_1.jpg");
+}
+.slideshow .sld2 {
+  background-image: url("http://shaha.ancorathemes.com/wp-content/uploads/2017/10/slider_2.jpg");
+}
+.slideshow .sld3 {
+  background-image: url("http://shaha.ancorathemes.com/wp-content/uploads/2017/10/slider_3.jpg");
+}
+.slideshow .sld4 {
+  background-image: url("http://shaha.ancorathemes.com/wp-content/uploads/2017/10/slider_2.jpg");
+}
+.slideshow .slide {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.slideshow .slide.is-active {
+  display: block;
+}
+.slideshow .slide.is-loaded {
+  opacity: 1;
+}
+.slideshow .slide .caption {
+  padding: 0 100px;
+}
+.slideshow .slide .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  z-index: 1;
+  background-size: cover;
+  image-rendering: optimizeQuality;
+}
+.slideshow .slide .image-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slideshow .slide .image {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.slideshow .slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideshow .slide .title {
+  margin: 0 auto 15px;
+  max-width: 1000px;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+.slideshow .slide .text {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.slideshow .slide .btn-learn-more {
+  margin: 15px 0 0;
+  border-color: #fff;
+}
+.slideshow .slide .btn-learn-more::before {
+  background: #fff;
+}
+.slideshow .pagination {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  cursor: default;
+  z-index: 2;
+  text-align: center;
+}
+.slideshow .pagination .item {
+  display: inline-block;
+  padding: 15px 5px;
+  position: relative;
+  width: 46px;
+  height: 32px;
+  cursor: pointer;
+  text-indent: -999em;
+  z-index: 1;
+}
+.slideshow .pagination .item + .page {
+  margin-left: -2px;
+}
+.slideshow .pagination .item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 36px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease;
+}
+.slideshow .pagination .item::after {
+  width: 0;
+  background: #fff;
+  z-index: 2;
+  transition: width 0.2s ease;
+}
+.slideshow .pagination .item:hover::before, .slideshow .pagination .item.is-active::before {
+  background-color: #fff;
+}
+.slideshow .arrows .arrow {
+  margin: -33px 0 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+.slideshow .arrows .prev {
+  left: 30px;
+}
+.slideshow .arrows .prev:hover .svg {
+  left: -10px;
+}
+.slideshow .arrows .next {
+  right: 30px;
+}
+.slideshow .arrows .next:hover .svg {
+  left: 10px;
+}
+.slideshow .arrows .svg {
+  position: relative;
+  left: 0;
+  width: 14px;
+  height: 26px;
+  fill: #fff;
+  transition: left 0.2s ease;
+}
+
+
+/************
+Slider Styles Ends here
+****************/
+
+/************
+Player Styles Starts here
+****************/
+
+/* This is purely for the demo */
+.player-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.plyr {
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/************
+Player Styles Ends here
+****************/
+
+/************
+Feature Image Styles Starts Here
+****************/
+
+/* Panels. */
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+    .panel .content {
+        position: absolute;
+        width: 100vw;
+        min-height: 45vw;
+        color: #FFF;
+    }
+
+    .panel .description {
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .panel img {
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+.bottom {
+    background-color: #fff;
+    z-index: 1;
+}
+
+    .bottom .description {
+        right: 5%;
+    }
+
+.top {
+    background-color: #BBA84B;
+    z-index: 2;
+    width: 50vw;
+
+    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+    .top .description {
+        left: 5%;
+    }
+
+/* Handle. */
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+/************
+Feature Image Styles Ends Here
+****************/
+

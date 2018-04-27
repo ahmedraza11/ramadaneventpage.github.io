@@ -2,25 +2,251 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <title>Ramadan Event Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Styles-->
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.2.4/plyr.css">
+
+	<!--Scripts-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" /></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script src="https://cdn.plyr.io/3.2.4/plyr.js"></script>
+
+	<title>Ramadan Event Page</title>
 </head>
 
 <body>
-    <div class="main-page-container">
-        <div class="logo-container">
-            <h3>Logo here</h3>
-        </div>
-        <div class="image-slider-container">
-            <h3>Image slider</h3>
-        </div>
-        <div class="menu-container">
-            <h3>Menu</h3>
-        </div>
-    </div>
+	<div class="main-page-container">
+		<div class="logo-container">
+			<h3>Logo here</h3>
+		</div>
+		<!-- Slider Starts Here -->
+		<div class="image-slider-container" id="slider">
+			<main class="main-content">
+				<section class="slideshow">
+					<div class="slideshow-inner">
+						<div class="slides">
+							<div class="slide sld4 is-active ">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">رمضان الکریم</div>
+										<div class="text">
+											<p>بارک اللہ لکم فی الرمضان</p>
+										</div>
+										<a href="#four" class="btn-learn-more">
+                 <span class="btn-inner">أعرف مزید</span>
+              </a>
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide sld1">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">رمضان الکریم</div>
+										<div class="text">
+											<p>بارک اللہ لکم فی الرمضان</p>
+										</div>
+										<a href="#four" class="btn-learn-more">
+                 <span class="btn-inner">أعرف مزید</span>
+              </a>
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide  sld2">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">رمضان الکریم</div>
+										<div class="text">
+											<p>بارک اللہ لکم فی الرمضان</p>
+										</div>
+										<a href="#four" class="btn-learn-more">
+                 <span class="btn-inner">أعرف مزید</span>
+              </a>
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg" alt="" class="image" />
+								</div>
+							</div>
+							<div class="slide  sld3">
+								<div class="slide-content">
+									<div class="caption">
+										<div class="title">رمضان الکریم</div>
+										<div class="text">
+											<p>بارک اللہ لکم فی الرمضان</p>
+										</div>
+										<a href="#four" class="btn-learn-more">
+                 <span class="btn-inner">أعرف مزید</span>
+              </a>
+									</div>
+								</div>
+								<div class="image-container">
+									<img src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg" alt="" class="image" />
+								</div>
+							</div>
+						</div>
+						<div class="pagination">
+							<div class="item is-active">
+								<span class="icon">1</span>
+							</div>
+							<div class="item">
+								<span class="icon">2</span>
+							</div>
+							<div class="item">
+								<span class="icon">3</span>
+							</div>
+							<div class="item">
+								<span class="icon">4</span>
+							</div>
+						</div>
+						<div class="arrows">
+							<div class="arrow prev">
+								<span class="svg svg-arrow-left">
+            <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> </svg>
+            <span class="alt sr-only"></span>
+								</span>
+							</div>
+							<div class="arrow next">
+								<span class="svg svg-arrow-right">
+            <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> </svg>
+            <span class="alt sr-only"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<!--Slider Ends Here-->
+		<!--Introduction Text Goes Here-->
+		<div class="section white section scrollspy" id="parallex">
+			<div class="row container">
+				<h2 class="header">تعارف</h2>
+				<p class="grey-text text-darken-3 lighten-3">
+					يعمل مركز الدعوة الإسلامية على نشر الإسلام وإحياء السنن والدعوة إلى الخير لخدمة الدين، ويحتوي المركز على أقسام مختلفة في
+					خدمته، مثل مدارس المدينة لقراءة القرآن وحفظه، وجامعات المدينة لتعليم دورات الشريعة ودارالمدينة للتعليم الابتدائي الديني
+					والدنيوي وقناة مدني الخالية من الإعلانات التجارية
+				</p>
+			</div>
+		</div>
+
+		<!--Introduction Text Ends Here-->
+		<div class="menu-container parallax-container">
+			<div class="parallax"><img src="https://om4.com.au/wp-content/uploads/grapes.jpg"></div>
+		</div>
+
+		<!--Introduction Video Starts Here-->
+		<div class="player-container row container" style="display:flex;justify-content:center;margin-top:10px;">
+			<video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+				<!-- Video files -->
+				<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+				<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+				<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+				<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+
+				<!-- Caption files -->
+				<track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+				 default>
+			</video>
+		</div>
+
+		<!--Introduction Video Ends Here-->
+
+
+		<!--Feature Image Starts Here-->
+		<div class="splitview skewed">
+			<div class="panel bottom">
+				<div class="content">
+					<div class="description">
+						<h1>The original image.</h1>
+						<p>This is how the image looks like before applying a duotone effect.</p>
+					</div>
+
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original">
+				</div>
+			</div>
+
+			<div class="panel top">
+				<div class="content">
+					<div class="description">
+						<h1>The duotone image.</h1>
+						<p>This is how the image looks like after applying a duotone effect.</p>
+					</div>
+
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrdeVlnc9fvsK12cG_9Wscxi_tGmonwQ2MRDmnA0-M9rWR_0D" alt="Duotone">
+				</div>
+			</div>
+
+			<div class="handle"></div>
+		</div>
+		<!--Feature Image Ends Here-->
+
+
+
+
+
+	</div>
+	<script>
+		$(document).ready(function () {
+			$('.tooltipped').tooltip();
+		});
+		$(document).ready(function () {
+			$('.carousel').carousel();
+		});
+		$(document).ready(function () {
+			$('.parallax').parallax();
+		});
+		$(document).ready(function () {
+			$('.scrollspy').scrollSpy();
+		});
+
+		document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+	</script>
 </body>
 
 </html>
