@@ -10,6 +10,8 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.2.4/plyr.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
 
 	<!--Scripts-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -17,6 +19,7 @@
 	<script type="text/javascript" src="./js/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 	<script src="https://cdn.plyr.io/3.2.4/plyr.js"></script>
+	<!--Bootstrap Scripts-->
 
 	<title>Ramadan Event Page</title>
 </head>
@@ -24,7 +27,7 @@
 <body>
 	<div class="main-page-container">
 		<div class="logo-container">
-			<h3>Logo here</h3>
+			<img src="./assets/logo.png" width="250px" height="250px" />
 		</div>
 		<!-- Slider Starts Here -->
 		<div class="image-slider-container" id="slider">
@@ -131,7 +134,7 @@
 		</div>
 		<!--Slider Ends Here-->
 		<!--Introduction Text Goes Here-->
-		<div class="section white section scrollspy" id="parallex">
+		<div class="section white section scrollspy" id="introduction-container">
 			<div class="row container">
 				<h2 class="header">تعارف</h2>
 				<p class="grey-text text-darken-3 lighten-3">
@@ -143,10 +146,7 @@
 		</div>
 
 		<!--Introduction Text Ends Here-->
-		<div class="menu-container parallax-container">
-			<div class="parallax"><img src="https://om4.com.au/wp-content/uploads/grapes.jpg"></div>
-		</div>
-
+		
 		<!--Introduction Video Starts Here-->
 		<div class="player-container row container" style="display:flex;justify-content:center;margin-top:10px;">
 			<video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
@@ -161,8 +161,14 @@
 				 default>
 			</video>
 		</div>
-
 		<!--Introduction Video Ends Here-->
+
+		<!--Feature Image Starts Here-->
+		<div class="menu-container parallax-container feature-image">
+			<div class="parallax"><img src="https://om4.com.au/wp-content/uploads/grapes.jpg"></div>
+		</div>
+		<!--Feature Image Ends Here-->
+
 
 
 		<!--Feature Image Starts Here-->
@@ -212,40 +218,40 @@
 			$('.scrollspy').scrollSpy();
 		});
 
-		document.addEventListener('DOMContentLoaded', () => { 
-  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-  const player = new Plyr('#player');
+		document.addEventListener('DOMContentLoaded', () => {
+			// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+			const player = new Plyr('#player');
 
-  // Bind event listener
-  function on(selector, type, callback) {
-    document.querySelector(selector).addEventListener(type, callback, false);
-  }
+			// Bind event listener
+			function on(selector, type, callback) {
+				document.querySelector(selector).addEventListener(type, callback, false);
+			}
 
-  // Play
-  on('.js-play', 'click', () => { 
-    player.play();
-  });
+			// Play
+			on('.js-play', 'click', () => {
+				player.play();
+			});
 
-  // Pause
-  on('.js-pause', 'click', () => { 
-    player.pause();
-  });
+			// Pause
+			on('.js-pause', 'click', () => {
+				player.pause();
+			});
 
-  // Stop
-  on('.js-stop', 'click', () => { 
-    player.stop();
-  });
+			// Stop
+			on('.js-stop', 'click', () => {
+				player.stop();
+			});
 
-  // Rewind
-  on('.js-rewind', 'click', () => { 
-    player.rewind();
-  });
+			// Rewind
+			on('.js-rewind', 'click', () => {
+				player.rewind();
+			});
 
-  // Forward
-  on('.js-forward', 'click', () => { 
-    player.forward();
-  });
-});
+			// Forward
+			on('.js-forward', 'click', () => {
+				player.forward();
+			});
+		});
 	</script>
 </body>
 
